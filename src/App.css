@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+.row{
+    border-radius: 3px;
+    background-color: #fff;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    border-bottom-width: 2px;
+    width:100%;
+     min-width:300px;
+    padding: 8px;
+    margin-bottom:3%;
+}
+
+a {
+    color: hotpink;
+    text-decoration: none;
+}
+
+
+.wrapper {
+    background-color: #E5E5E5;
+  color:#666666;
+}
+
+.img-c{
+    position: relative;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+  padding-top: 75.09%
+}
