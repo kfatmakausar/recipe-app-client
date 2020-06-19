@@ -1,7 +1,6 @@
 //import React from "react";
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
-import Recipes from "./Components";
 
 class UserProfile extends Component {
 
@@ -16,6 +15,12 @@ class UserProfile extends Component {
             <Link to="/">Search</Link>
 
             <div>Username: insert username value here</div>
+
+            <div>
+
+
+
+            </div>
 
         </div>
 

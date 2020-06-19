@@ -8,7 +8,7 @@ function Recipes(props) {
             <h2>Search Result</h2>
             {props.searchResult.map((recipe)=>{
                 return recipe.name; //Return the recipe's name
-                return recipe.added; //Was the recipe made yet?
+                return recipe.added; //Was the recipe added yet?
                 return recipe.made; //Was the recipe made yet?
             })}
         </div>
