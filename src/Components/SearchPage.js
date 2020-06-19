@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import Form from "./Form";
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-//import Recipes from "./Components/Recipes";
-//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import UserProfile from "./UserProfile";
 import axios from "axios";
 import { Link } from "react-router-dom";
-//import Nav from "./Components/Nav"
 const API_KEY = "b2174079fceb4335a22508ae27c82eb6";
+const added_recipes = [];
+//exports.added_recipes = added_recipes;
 
 export default class SearchPage extends Component {
   state = {
-    recipes: []
+    recipes: [],
+    added_recipes: []
   };
 
   getRecipe = async e => {
@@ -27,6 +27,13 @@ export default class SearchPage extends Component {
         this.setState({ recipes: recipes});
       });
   };
+
+  addRecipe(recipe) { //Add recipe
+
+    added_recipes.push(recipe);
+    this.state.added_recipes.push(recipe);
+
+  }
 
   render() {
     const imageUrl = "https://spoonacular.com/recipeImages/";
@@ -48,7 +55,7 @@ export default class SearchPage extends Component {
               <div className="row"> 
                   {this.state.recipes.map((recipe,i) => (
                    <div className="col-md-4 recipeBox" key={i}> 
-                    <img src={imageUrl + recipe.image} alt="" style={{width: '300px', height: '300px'}} /> <button onclick="addRecipe()">Add</button>
+                    <img src={imageUrl + recipe.image} alt="" style={{width: '300px', height: '300px'}} /> <button onclick="addRecipe(recipe)">Add</button>
                      <a href={recipe.sourceUrl} target="_blank"  rel="noopener noreferrer">  <p className="recipeTitle"> {recipe.title}</p></a>
                    </div>
                   ))}

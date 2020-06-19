@@ -2,8 +2,8 @@
 
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import SearchPage from './Components/SearchPage.js';
-import UserProfile from './Components/UserProfile.js';
+import SearchPage from './components/SearchPage.js';
+import UserProfile from './components/UserProfile.js';
 
 class App extends Component {
 
