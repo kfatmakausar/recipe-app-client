@@ -13,6 +13,7 @@ const fetchAllRecipes = (recipes) => {
 
 const API_KEY = process.env.REACT_APP_SPOONACULAR_API;
 // const RECIPE_API_BASE = "https://api.spoonacular.com/recipes/search";
+
 //thunk creators
 export const fetchAllRecipesThunk = (
   searchTerm = "cheese",
