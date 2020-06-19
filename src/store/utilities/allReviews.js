@@ -1,5 +1,4 @@
 import axios from "axios";
-import { fetchAllRecipesThunk } from "./allRecipes";
 
 //actiontypes
 const FETCH_ALL_REVIEWS = "FETCH_ALL_REVIEWS";
@@ -31,7 +30,7 @@ export const fetchAllReviewsThunk = () => (dispatch) => {
 
 export const addReviewThunk = (recipeId) => (dispatch) => {
   return axios
-    .post("/api/reviews", { data: { recipeId, userId: 1 } })
+    .post("/api/reviews", { data: { recipeId, description, userId: 1 } })
     .then((res) => res.data)
     .then((review) => dispatch(addReview(review)))
     .catch((err) => console.log(err));
