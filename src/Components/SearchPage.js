@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Form from "./Form";
-import UserProfile from "./UserProfile";
+import UserProfile from "./containers/UserProfileContainer";
 import axios from "axios";
 import { Link } from "react-router-dom";
 const API_KEY = "b2174079fceb4335a22508ae27c82eb6";

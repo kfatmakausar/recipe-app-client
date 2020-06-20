@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import SearchPage from './components/SearchPage.js';
-import UserProfile from './components/UserProfile.js';
+import UserProfileContainer from './components/containers/UserProfileContainer.js';
 
 class App extends Component {
 
@@ -22,7 +22,7 @@ class App extends Component {
 
     const SearchPageComponent = () => (<SearchPage/>);
     const UserProfileComponent = () => (
-        <UserProfile/>
+        <UserProfileContainer/>
     );
 
     return (
