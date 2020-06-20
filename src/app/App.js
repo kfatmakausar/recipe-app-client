@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import RoutesContainer from "../components/routes/RoutesContainer";
 import NavBarContainer from "../components/containers/NavBarContainer";
+import AllRecipesContainer from "../components/containers/AllRecipesContainer";
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <NavBarContainer />
         <header className="app-header">
           <RoutesContainer />
+          <AllRecipesContainer />
         </header>
       </div>
     );

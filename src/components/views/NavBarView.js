@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/NavBarView.css";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBarView = (props) => {
   return (
