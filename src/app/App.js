@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Form from "./Components/Form";
+import Form from "../Components/containers/Form";
 //import Recipes from "./Components/Recipes";
-//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import axios from "axios";
 //import Nav from "./Components/Nav"
@@ -30,16 +29,20 @@ export default class App extends Component {
   render() {
     const imageUrl = "https://spoonacular.com/recipeImages/";
     return (
-      <div>
+
         <div className="wrapper">
           <div className="main">
             <div className="container">
-              <div className="row d-flex justify-content-center">
-                <h1 className="logo"> Search for your favorite meal </h1>
+              <div className="row">
+                <h1> Search for your favorite meal </h1>
               </div>
-              <div className="row d-flex justify-content-center searchForm">
+
+               {/* return search input from users*/}
+              <div className="searchForm">
                 <Form getRecipe={this.getRecipe} />
               </div>
+
+              {/* maps title, image and link */}
               <div className="row"> 
                   {this.state.recipes.map((recipe,i) => (
                    <div className="col-md-4 recipeBox" key={i}> 
@@ -47,12 +50,11 @@ export default class App extends Component {
                      <a href={recipe.sourceUrl} target="_blank"  rel="noopener noreferrer">  <p className="recipeTitle"> {recipe.title}</p></a>
                    </div>
                   ))}
-                
-              </div>
+              </div> 
             </div>
           </div>
         </div>
-      </div>
+    
     );
   }
 }
